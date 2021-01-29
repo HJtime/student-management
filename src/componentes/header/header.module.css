@@ -1,0 +1,46 @@
+@value makerDeepBlue, makerWhite, makerBlack, makerGrey from '/src/common/colors.css';
+
+.header{
+    width: 100%;
+    padding: 0.5em;
+    text-align: center;
+    position: relative;
+    background-color: makerDeepBlue;
+    box-sizing: border-box;
+}
+
+.title{
+    color: makerWhite;
+    margin-top: 3.5em;
+    margin-bottom: 1.5em;
+}
+
+.search{
+    position: absolute;
+    width: 100%;
+    top: 95%;
+    left: 0%;
+}
+
+.searchbar{
+    width: 50%;
+    height: 4em;
+    outline: none;
+    border: 1px solid makerGrey;
+    border-radius: 0.5em;
+    padding: 2em;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout{
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    padding: 0.5em 1em;
+    border-radius: 0.2em;
+    background-color: makerBlack;
+    color: makerWhite;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+}

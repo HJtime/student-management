@@ -1,0 +1,60 @@
+@value makerDeepBlue, makerWhite from '/src/common/colors.css';
+
+.login{
+    width: 100%;
+    height: 100vh;
+    background-color: makerDeepBlue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    width: 25em;
+    height: 35em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: makerWhite;
+    border-radius: 0.5em;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title{
+    color: makerDeepBlue;
+    font-size: 2em;
+    padding-top: 2em;
+}
+
+.list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.item{
+    margin-bottom: 2em;
+}
+
+.button{
+    width: 10em;
+    height: 2.5em;
+    background-color: makerDeepBlue;
+    color: makerWhite;
+    font-size: 1.5em;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 0.3em;
+    cursor: pointer;
+    transition: all 250ms ease-in;
+}
+
+.button:hover{
+    background-color: makerWhite;
+    border: 2px solid makerDeepBlue;
+    color: makerDeepBlue;
+}
+
+.span{
+    padding-left: 0.5em;
+}
