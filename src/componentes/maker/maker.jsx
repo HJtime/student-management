@@ -5,34 +5,33 @@ import Header from '../header/header';
 import Preview from '../preview/preview';
 import styles from './maker.module.css';
 
-const Maker = ({FileInput, authService}) => {
+const Maker = ({FileInput, authService, studentRepository}) => {
+    const historyState=useHistory().state;
     const history=useHistory();
-    const [students, setStudents]=useState({
-        '1':{
-            id:'1',
-            name: '김상균',
-            sex: '남성',
-            birth: '1995-01-01',
-            job: '가수'
-        },
-        '2':{
-            id:'2',
-            name: '김현진',
-            sex: '여성',
-            birth: '1997-08-06',
-            job: '대학생'
-        },
-    });
+    const [students, setStudents]=useState({});
     const [selected, setSelected]=useState(null);
     const [value, setValue]=useState(null);
+    const [userId, setUserId]=useState(historyState&&historyState.id);
 
     const onLogout=useCallback(()=>{
         authService.logout();
     },[authService]);
 
     useEffect(()=>{
+        if(!userId){
+            return;
+        }
+        const stopSync=studentRepository.syncStudents(userId, students=>{
+            setStudents(students);
+        })
+        return()=>{stopSync();}
+    },[userId])
+
+    useEffect(()=>{
         authService.onAuthChange(user=>{
-            if(!user){
+            if(user){
+                setUserId(user.uid);
+            }else{
                 history.push('/');
             }
         })
@@ -48,6 +47,7 @@ const Maker = ({FileInput, authService}) => {
             updated[student.id]=student;
             return updated;
         });
+        studentRepository.saveStudent(userId, student);
     }
 
     const deleteStudent=(student)=>{
@@ -56,6 +56,7 @@ const Maker = ({FileInput, authService}) => {
             delete updated[student.id];
             return updated;
         });
+        studentRepository.removeStudent(userId, student);
     }
 
     const onStudentClick=(student)=>{
@@ -66,7 +67,9 @@ const Maker = ({FileInput, authService}) => {
         <section className={styles.maker}>
             <Header onLogout={onLogout} onSearch={onSearch}/>
             <div className={styles.container}>
-                <Editor selected={selected} FileInput={FileInput} addStudent={createOrUpdateStudent} deleteStudent={deleteStudent} updateStudent={createOrUpdateStudent}/>
+                <div className={styles.editor}>
+                    <Editor selected={selected} FileInput={FileInput} addStudent={createOrUpdateStudent} deleteStudent={deleteStudent} updateStudent={createOrUpdateStudent}/>
+                </div>
                 <Preview value={value} onStudentClick={onStudentClick} students={students}/>
             </div>
         </section>

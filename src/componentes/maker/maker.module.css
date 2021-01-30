@@ -15,4 +15,8 @@
     .container{
         flex-direction: column;
     }
+
+    .editor{
+        margin-bottom: 3em;
+    }
 }
