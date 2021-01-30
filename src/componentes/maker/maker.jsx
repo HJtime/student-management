@@ -24,6 +24,7 @@ const Maker = ({FileInput, authService}) => {
         },
     });
     const [selected, setSelected]=useState(null);
+    const [value, setValue]=useState(null);
 
     const onLogout=useCallback(()=>{
         authService.logout();
@@ -36,6 +37,10 @@ const Maker = ({FileInput, authService}) => {
             }
         })
     })
+
+    const onSearch=(value)=>{
+        setValue(value);
+    }
 
     const createOrUpdateStudent=(student)=>{
         setStudents(students=>{
@@ -59,10 +64,10 @@ const Maker = ({FileInput, authService}) => {
 
     return(
         <section className={styles.maker}>
-            <Header onLogout={onLogout}/>
+            <Header onLogout={onLogout} onSearch={onSearch}/>
             <div className={styles.container}>
                 <Editor selected={selected} FileInput={FileInput} addStudent={createOrUpdateStudent} deleteStudent={deleteStudent} updateStudent={createOrUpdateStudent}/>
-                <Preview onStudentClick={onStudentClick} students={students}/>
+                <Preview value={value} onStudentClick={onStudentClick} students={students}/>
             </div>
         </section>
     );

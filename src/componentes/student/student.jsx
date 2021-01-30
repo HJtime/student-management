@@ -3,6 +3,7 @@ import styles from './student.module.css';
 
 const DEFAULT_IMAGE=process.env.PUBLIC_URL+'/images/default_profile.png';
 const Student = ({student, onStudentClick}) => {
+    console.log('student',student);
     const {name, birth, sex, job, fileURL}=student;
     const url=fileURL||DEFAULT_IMAGE;
 
