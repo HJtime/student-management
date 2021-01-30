@@ -1,0 +1,47 @@
+@value makerGrey, makerWhite from '/src/common/colors.css';
+
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    border: 1px solid makerGrey;
+    border-radius: 0.3em;
+    margin: 1.5em auto 0 auto;
+}
+
+.inputbox{
+    display: flex;
+    flex: 1 1 45%;
+    margin: 0.9em;
+}
+
+.title{
+    flex-basis: 20%;
+    margin-right: 0.5em;
+}
+
+.input, .select{
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.7em;
+    background-color: makerWhite;
+    outline: none;
+    border: 1px solid makerGrey;
+    flex-basis: 80%;
+}
+
+.buttonbox{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.9em;
+}
+
+.fileInput, .button{
+    flex: 1 1 100%;
+    margin: 0 0.2em;
+}
+
+.input:focus, .select:focus, .button:focus{
+    outline: none;
+}

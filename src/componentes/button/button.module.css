@@ -1,0 +1,13 @@
+@value makerWhite, makerGrey from '/src/common/colors.css';
+
+.button{
+    width: 100%;
+    height: 2.5em;
+    background-color: makerGrey;
+    color: makerWhite;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.8rem;
+    outline: none;
+    border: none;
+}

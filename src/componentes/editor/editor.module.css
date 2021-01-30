@@ -1,0 +1,20 @@
+@value makerDeepBlue, makerWhite, makerGrey from '/src/common/colors.css';
+
+.editor{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.title{
+    width: 13em;
+    height: 40px;
+    background-color: makerDeepBlue;
+    color: makerWhite;
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+    font-size: 1em;
+}

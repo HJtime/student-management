@@ -1,0 +1,30 @@
+@value makerDeepBlue, makerWhite from '/src/common/colors.css';
+
+.preview{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.title{
+    width: 13em;
+    height: 50px;
+    background-color: makerDeepBlue;
+    color: makerWhite;
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+    font-size: 1em;
+}
+
+.students{
+    width: 100%;
+    height: 100%;
+    padding: 0.5em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+}

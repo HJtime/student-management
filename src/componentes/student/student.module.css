@@ -1,0 +1,20 @@
+@value makerGrey, makerWhite from '/src/common/colors.css';
+
+.student{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px makerGrey;
+    border-radius: 1.2em;
+    padding: 0.5em 1em;
+    margin-bottom: 1em;
+    background-color: makerWhite;
+    cursor: pointer;
+}
+
+.profileimg{
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+}
