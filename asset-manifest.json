@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/student-management/static/css/main.333c5edc.chunk.css",
-    "main.js": "/student-management/static/js/main.a8ddc870.chunk.js",
-    "main.js.map": "/student-management/static/js/main.a8ddc870.chunk.js.map",
+    "main.js": "/student-management/static/js/main.eb9b4af0.chunk.js",
+    "main.js.map": "/student-management/static/js/main.eb9b4af0.chunk.js.map",
     "runtime-main.js": "/student-management/static/js/runtime-main.24125c3a.js",
     "runtime-main.js.map": "/student-management/static/js/runtime-main.24125c3a.js.map",
-    "static/js/2.866fceab.chunk.js": "/student-management/static/js/2.866fceab.chunk.js",
-    "static/js/2.866fceab.chunk.js.map": "/student-management/static/js/2.866fceab.chunk.js.map",
+    "static/js/2.f27cce7d.chunk.js": "/student-management/static/js/2.f27cce7d.chunk.js",
+    "static/js/2.f27cce7d.chunk.js.map": "/student-management/static/js/2.f27cce7d.chunk.js.map",
     "index.html": "/student-management/index.html",
     "static/css/main.333c5edc.chunk.css.map": "/student-management/static/css/main.333c5edc.chunk.css.map",
-    "static/js/2.866fceab.chunk.js.LICENSE.txt": "/student-management/static/js/2.866fceab.chunk.js.LICENSE.txt"
+    "static/js/2.f27cce7d.chunk.js.LICENSE.txt": "/student-management/static/js/2.f27cce7d.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.24125c3a.js",
-    "static/js/2.866fceab.chunk.js",
+    "static/js/2.f27cce7d.chunk.js",
     "static/css/main.333c5edc.chunk.css",
-    "static/js/main.a8ddc870.chunk.js"
+    "static/js/main.eb9b4af0.chunk.js"
   ]
 }
