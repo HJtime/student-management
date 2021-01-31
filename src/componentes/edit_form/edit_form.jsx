@@ -45,7 +45,8 @@ const EditForm = ({student, FileInput, updateStudent, deleteStudent}) => {
         }
         updateStudent(_student);
     }
-    const onSubmit=()=>{
+    const onSubmit=(event)=>{
+        event.preventDefault();
         deleteStudent(student);
     }
 
