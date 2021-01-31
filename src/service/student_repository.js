@@ -1,8 +1,8 @@
-import firebaseApp from './firebase';
+import {firebaseDatabase} from './firebase';
 
 class StudentRepository{
     syncStudents(userId, onUpdate){
-        const ref=firebaseApp.database().ref(`${userId}/students`);
+        const ref=firebaseDatabase.ref(`${userId}/students`);
         ref.on('value', snapshot=>{
             const value=snapshot.val();
             value&&onUpdate(value);
@@ -10,11 +10,11 @@ class StudentRepository{
         return()=>ref.off();
     }
     saveStudent(userId, student){
-        firebaseApp.database().ref(`${userId}/students/${student.id}`).set(student);
+        firebaseDatabase.ref(`${userId}/students/${student.id}`).set(student);
     }
 
     removeStudent(userId, student){
-        firebaseApp.database().ref(`${userId}/students/${student.id}`).remove();
+        firebaseDatabase.ref(`${userId}/students/${student.id}`).remove();
     }
 }
 

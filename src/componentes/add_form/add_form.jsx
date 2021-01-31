@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react';
+import React, { memo, useRef, useState } from 'react';
 import Button from '../button/button';
 import styles from './add_form.module.css';
 
-const AddForm = ({FileInput, onAdd}) => {
+const AddForm =memo(({FileInput, onAdd}) => {
     const formRef=useRef();
     const nameRef=useRef();
     const sexRef=useRef();
@@ -63,6 +63,6 @@ const AddForm = ({FileInput, onAdd}) => {
             </div>
         </form>
     );
-};
+});
 
 export default AddForm;

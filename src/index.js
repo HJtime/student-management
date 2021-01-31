@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './app';
@@ -11,9 +11,9 @@ import StudentRepository from './service/student_repository';
 const authService=new AuthService();
 const imageUploader=new ImageUploader();
 const studentRepository=new StudentRepository();
-const FileInput=props=>(
+const FileInput=memo(props=>(
   <ImageFileInput {...props} imageUploader={imageUploader}/>
-)
+))
 ReactDOM.render(
   <React.StrictMode>
     <App authService={authService} studentRepository={studentRepository} FileInput={FileInput}/>

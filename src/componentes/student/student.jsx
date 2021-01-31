@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from './student.module.css';
 
 const DEFAULT_IMAGE=process.env.PUBLIC_URL+'/images/default_profile.png';
-const Student = ({student, onStudentClick}) => {
-    console.log('student',student);
+const Student = memo(({student, onStudentClick}) => {
     const {name, birth, sex, job, fileURL}=student;
     const url=fileURL||DEFAULT_IMAGE;
 
@@ -20,6 +19,6 @@ const Student = ({student, onStudentClick}) => {
             <span className={styles.info}>{job}</span>
         </li>
     );
-};
+});
 
 export default Student;
