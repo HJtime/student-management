@@ -1,3 +1,29 @@
+# 개요
+REACT, PostCSS를 사용하여 만든 수강생 관리 페이지
+
+## SKILL
+* REACT
+* PostCSS
+* firebase
+
+## 기능
+1. firebase를 활용한 로그인&로그아웃
+2. 로그인 사용자 기억
+3. 수강생 추가 및 정보 수정
+4. 수강생 서치
+5. firebase 데이터베이스에 실시간 수정 가능
+6. 이미지 등록 가능
+
+
+## 실행 화면
+1. PC화면
+<img src="https://user-images.githubusercontent.com/72139168/106559626-02549080-6569-11eb-902d-fa4c95887626.PNG" width="700" height="370">
+2. 모바일 화면
+<img src="https://user-images.githubusercontent.com/72139168/106559629-04b6ea80-6569-11eb-925e-47247dd9f510.PNG" width="460" height="700">
+3. EDIT 화면
+<img src="https://user-images.githubusercontent.com/72139168/106559673-13050680-6569-11eb-800e-17ff9fdae187.PNG" width="600" height="350">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
