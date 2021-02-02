@@ -1,6 +1,6 @@
 # 개요
-REACT, PostCSS, firebase를 사용하여 만든 수강생 관리 페이지-
-VIEW - https://hjtime.github.io/student-management/
+REACT, PostCSS, firebase를 사용하여 만든 수강생 관리 페이지
+[VIEW](https://hjtime.github.io/student-management/)
 
 ## SKILL
 * REACT
