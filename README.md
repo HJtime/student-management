@@ -1,10 +1,9 @@
 # 개요
-REACT, PostCSS를 사용하여 만든 수강생 관리 페이지
+REACT, PostCSS, firebase를 사용하여 만든 수강생 관리 페이지
 
 ## SKILL
 * REACT
 * PostCSS
-* firebase
 
 ## 기능
 1. firebase를 활용한 로그인&로그아웃
